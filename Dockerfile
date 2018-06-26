@@ -17,6 +17,6 @@ RUN pip install -r /config/requirements.txt
 
 # Add wait-for
 ADD https://raw.githubusercontent.com/Eficode/wait-for/master/wait-for /code
-RUN chmod 755 /code/wait-for
+RUN chmod 755 /code/wait-for /code/wait-for-selenium.sh
 
 COPY ./ /code/
