@@ -21,7 +21,7 @@ bot = InstaPy(username=insta_username, password=insta_password, selenium_local_s
 bot.set_selenium_remote_session(selenium_url='http://selenium:4444/wd/hub')
 bot.login()
 bot.set_relationship_bounds(enabled=True,
-             potency_ratio=-1.21,
+             potency_ratio=None,
               delimit_by_numbers=True,
                max_followers=4590,
                 max_following=5555,
@@ -32,8 +32,8 @@ bot.set_relationship_bounds(enabled=True,
 # and randomly choose 5 pictures to be liked.
 # Take into account the other set options like the comment rate
 # and the filtering for inappropriate words or users
-bot.set_user_interact(amount=5, randomize=True, percentage=50, media='Photo')
-bot.follow_user_followers(follow_user_followers, amount=10, randomize=False, interact=True, sleep_delay=60)
+bot.set_user_interact(amount=2, randomize=True, percentage=50, media='Photo')
+bot.follow_user_followers(follow_user_followers, amount=200, randomize=True, interact=True, sleep_delay=60)
 
 bot.unfollow_users(amount=200, InstapyFollowed=(True, "all"), style="FIFO", unfollow_after=90*60*60, sleep_delay=501)
 
